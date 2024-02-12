@@ -12,17 +12,19 @@
   "antiInbox": false,
   "language": "en",
   "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-  "adminOnly": true,
+  "adminOnly": {
+    "enable": false,
+    "ignoreCommand": []
+  },
   "adminBot": [
-    "100079402482429",
-    ""
+    "100079402482429"
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Tk-Bot-V10",
+  "nickNameBot": "•Tk bot•",
   "prefix": "@",
   "database": {
     "type": "sqlite",
@@ -34,15 +36,15 @@
   "timeZone": "Asia/Ho_Chi_Minh",
   "credentials": {
     "gmailAccount": {
-      "email": "tchindaazice@gmail.com",
-      "clientId": "930308033521-sv8r360ibt5dgr5n1l5oogb7kom9vreq.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//04sAoEJE3Iq3tCgYIARAAGAQSNwF-L9IrX7QyowrYemGsBJkK8Z_atg8ih6LtaFS-4ttMQ4a697c4XWZvaAOulWyTCNQDPrpvdcg",
+      "email": "hyanguep1999@gmail.com",
+      "clientId": "987698237742-1pb9m47r0clpscdipfm3sh19o8mffgjv.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04tTbQ4nQ52oTCgYIARAAGAQSNwF-L9IrhkpXGPToLXEmFnyAoXUQFyyuOyt-PUBkUXJLVqeul9lFCnYXC_XgVXmn2u28P9nZ_7E",
       "apiKey": ""
     },
     "gRecaptcha": {
-      "siteKey": "6LfHuRopAAAAANqF1SB3YAX-zsg-vkMP5x9V6KgA",
-      "secretKey": "6LfHuRopAAAAADpbiRwSXJGOm9dtlgFDAqcKAAc2"
+      "siteKey": "6Lc9QN4oAAAAAFJ-mhrDEwkzoh1bdE9vcahSvd_I",
+      "secretKey": "6Lc9QN4oAAAAAHmTFXnTCETQtfuaBtqwnnNYDZgl"
     }
   },
   "dashBoard": {
@@ -51,7 +53,7 @@
     "port": 3001
   },
   "serverUptime": {
-    "enable": false,
+    "enable": true,
     "port": 3001,
     "socket": {
       "enable": true,
@@ -65,7 +67,7 @@
   },
   "autoUptime": {
     "enable": false,
-    "timeInterval": 500,
+    "timeInterval": 300000,
     "url": "",
     "notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
   },
@@ -79,10 +81,10 @@
   "autoReloginWhenChangeAccount": false,
   "autoRestartWhenListenMqttError": false,
   "restartListenMqtt": {
-    "disable": false,
-    "timeRestart": 0,
-    "delayAfterStopListening": 0,
-    "logNoti": false,
+    "enable": true,
+    "timeRestart": 3600000,
+    "delayAfterStopListening": 2000,
+    "logNoti": true,
     "notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
   },
   "notiWhenListenMqttError": {
@@ -105,10 +107,11 @@
     }
   },
   "hideNotiMessage": {
-    "wrongCommand": false,
+    "commandNotFound": false,
     "adminOnly": false,
     "threadBanned": false,
     "userBanned": false,
+    "needRoleToUseCmd": false,
     "needRoleToUseCmdOnReply": false,
     "needRoleToUseCmdOnReaction": false
   },
@@ -135,4 +138,4 @@
     "autoReconnect": true,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   }
-  }
+}
