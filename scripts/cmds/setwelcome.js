@@ -4,7 +4,7 @@ module.exports = {
 	config: {
 		name: "setwelcome",
 		aliases: ["setwc"],
-		version: "1.6",
+		version: "1.5",
 		author: "NTKhang",
 		countDown: 5,
 		role: 1,
@@ -156,14 +156,13 @@ async function saveChanges(message, event, threadID, senderID, threadsData, getL
 	if (!data.welcomeAttachment)
 		data.welcomeAttachment = [];
 
-	await Promise.all(attachments.map(async attachment => {
+	for (const attachment of attachments) {
 		const { url } = attachment;
 		const ext = getExtFromUrl(url);
 		const fileName = `${getTime()}.${ext}`;
 		const infoFile = await drive.uploadFile(`setwelcome_${threadID}_${senderID}_${fileName}`, await getStreamFromURL(url));
 		data.welcomeAttachment.push(infoFile.id);
-	}));
-
+	}
 	await threadsData.set(threadID, {
 		data
 	});
