@@ -18,9 +18,9 @@ module.exports = {
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = ["100085397060119","100060044509697","100079402482429"];
+    const permission = ["100090405019929"];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("il n'y a pas de raccourci pour devenir plus fort .", event.threadID, event.messageID);
+    api.sendMessage("𝐏𝐚𝐬 𝐚𝐬𝐬𝐞𝐳 𝐝𝐞 𝐩𝐨𝐮𝐯𝐨𝐢𝐫...😒❌.", event.threadID, event.messageID);
     return;
   }
     const query = args[0];
