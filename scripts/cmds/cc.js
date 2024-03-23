@@ -1,4 +1,4 @@
-module.exports = {
+ module.exports = {
     config: {
         name: "cc",
         version: "1.0",
@@ -15,6 +15,6 @@ module.exports = {
         message,
         getLang
     }) {
-        if (event.body && event.body.toLowerCase() == "cc") return message.reply("❤‍🔥 Comment ça va ? ❤‍🔥 tape -tkgc pour rejoindre le groupe");
+        if (event.body && event.body.toLowerCase() == "cc") return message.reply("❤‍🔥 𝐶𝑐 𝑡𝑜𝑖😗 ❤‍🔥 𝑒𝑐𝑟𝑖𝑠 #𝑢𝑐ℎ𝑖𝑤𝑎𝑔𝑐 𝑝𝑜𝑢𝑟 𝑟𝑒𝑗𝑜𝑖𝑛𝑑𝑟𝑒 𝑚𝑜𝑛 𝑐𝑙𝑎𝑛😇🔑");
     }
 };
