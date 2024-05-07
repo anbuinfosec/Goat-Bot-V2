@@ -378,7 +378,7 @@ function message(api, event) {
 				}
 			}
 		},
-		reaction: async (message, messageID, callback) => {
+		edit: async (message, messageID, callback) => {
 			try {
 				global.statusAccountBot = 'good';
 				return await api.editMessage(message, messageID, callback, true);
@@ -395,6 +395,18 @@ function message(api, event) {
 			try {
 				global.statusAccountBot = 'good';
 				return await api.setMessageReaction(emoji, messageID, callback, true);
+			}
+			catch (err) {
+				if (JSON.stringify(err).includes('spam')) {
+					setErrorUptime();
+					throw err;
+				}
+			}
+		},
+		react: async (emoji, callback) => {
+			try {
+				global.statusAccountBot = 'good';
+				return await api.setMessageReaction(emoji, event.messageID, callback, true);
 			}
 			catch (err) {
 				if (JSON.stringify(err).includes('spam')) {
