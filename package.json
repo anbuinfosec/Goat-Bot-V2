@@ -51,6 +51,7 @@
 	},
 	"scripts": {
 		"start": "set NODE_ENV=&& node index.js",
+		"pm2": "bash run.sh",
 		"dev": "set NODE_ENV=development&& node index.js",
 		"prod": "set NODE_ENV=production&& node index.js"
 	},

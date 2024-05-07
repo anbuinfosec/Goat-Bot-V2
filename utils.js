@@ -378,6 +378,18 @@ function message(api, event) {
 				}
 			}
 		},
+		reaction: async (message, messageID, callback) => {
+			try {
+				global.statusAccountBot = 'good';
+				return await api.editMessage(message, messageID, callback, true);
+			}
+			catch (err) {
+				if (JSON.stringify(err).includes('spam')) {
+					setErrorUptime();
+					throw err;
+				}
+			}
+		},
 		unsend: async (messageID, callback) => await api.unsendMessage(messageID, callback),
 		reaction: async (emoji, messageID, callback) => {
 			try {
